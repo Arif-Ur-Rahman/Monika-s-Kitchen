@@ -78,7 +78,7 @@ const CakeGallery = () => {
 
   return (
     <section className="py-20 bg-white">
-      <div className="section-padding">
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Our <span className="text-rose-500">Delicious</span> Collection
@@ -110,7 +110,7 @@ const CakeGallery = () => {
           {filteredCakes.map((cake) => (
             <div
               key={cake.id}
-              className="group card-hover bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100"
+              className="group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100"
             >
               {/* Cake Image */}
               <div className={`relative h-64 ${cake.imageColor} flex items-center justify-center`}>
@@ -128,7 +128,7 @@ const CakeGallery = () => {
                 )}
                 <button
                   onClick={() => toggleLike(cake.id)}
-                  className="absolute top-4 right-4 p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30"
+                  className="absolute top-4 right-4 p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
                 >
                   <Heart
                     size={20}
@@ -152,11 +152,11 @@ const CakeGallery = () => {
                 <p className="text-gray-600 mb-6">{cake.description}</p>
                 
                 <div className="flex justify-between items-center">
-                  <button className="btn-primary flex-1 mr-3">
+                  <button className="bg-rose-500 hover:bg-rose-600 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 flex-1 mr-3 flex items-center justify-center">
                     <ShoppingBag size={18} className="mr-2" />
                     Add to Cart
                   </button>
-                  <button className="p-3 border border-gray-300 rounded-xl hover:bg-gray-50">
+                  <button className="p-3 border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors">
                     <Eye size={20} />
                   </button>
                 </div>
