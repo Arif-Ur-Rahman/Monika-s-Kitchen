@@ -21,7 +21,7 @@ const Hero = () => {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-rose-100 via-pink-50 to-amber-50">
-      <div className="section-padding py-20 md:py-32">
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto py-20 md:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
@@ -46,10 +46,10 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button className="btn-primary inline-flex items-center justify-center">
+              <button className="bg-rose-500 hover:bg-rose-600 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center justify-center">
                 Order Now <ArrowRight className="ml-2" size={20} />
               </button>
-              <button className="btn-secondary">
+              <button className="border-2 border-rose-500 text-rose-600 hover:bg-rose-50 font-semibold py-3 px-6 rounded-full transition-all duration-300">
                 View Our Collection
               </button>
             </div>
